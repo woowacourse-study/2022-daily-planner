@@ -55,8 +55,8 @@
 - merge 조건은 오전 일정 확인시간에  최소한 4명이 일정을 확인하고 approve인 상태입니다.
 
 ## 💻스터디 상황표
-|                |     |     |     |     |     |     |     |     |
-|----------------|-----|-----|-----|-----|-----|-----|-----|-----|
+|                |[아서](https://github.com/Hyunta)|[앨버](https://github.com/al-bur)|[오리](https://github.com/jinyoungchoi95)|&nbsp;&nbsp;[잉](https://github.com/Yboyu0u)&nbsp;&nbsp;|[티거](https://github.com/daaaayeah)|[코린](https://github.com/hamcheeseburger)|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|----------------|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | 2/28(월)        |     |     |     |     |     |     |     |     |
 | ~~3/1<br>삼일절~~ |     |     |     |     |     |     |     |     |
 | 3/2            |     |     |     |     |     |     |     |     |
