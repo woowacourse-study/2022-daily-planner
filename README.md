@@ -55,41 +55,41 @@
 - 생성된 본인의 닉네임 폴더에 일주일 단위로 md파일을 만들어 일주일간의 분량을 한번에 볼 수 있도록 작성합니다. (Ex. 3/1-3/6.md)
 - merge 조건은 오전 일정 확인시간에 최소한 4명이 일정을 확인하고 approve인 상태입니다.
 
-### 🙆‍♂️git
+## 🙆‍♂️git
 - 당일 계획 작성 전 fetch-merge
 
-```bash
+```
 $ git checkout main
+
 $ git remote add upstream https://github.com/woowacourse-study/2022-daily-planner
 $ git fetch upstream main
 $ git merge upstream/main
+
 $ git checkout -b feature
 ```
 
 - 계획표 작성 및 pull request
 
-```bash
+```
 $ git add .
 $ git commit -m "commit message"
 $ git push origin feature
-```
-```[README.md](assets/README.md)<!-- {"embed":"true"} -->
-```
 
-```
 pull request in github
 ```
 
 - 계획 완료
 
-```bash
+```
 $ git fetch upstream main
 $ git rebase upstream/main
 
 상황표 체크 및 당일 일정 체크 후 커밋
-$ git add .[README.md](assets/README.md)<!-- {"embed":"true"} -->
+$ git add .
 $ git commit -m "commit message"
 $ git push origin feature
+
+$ git branch -d feature
 ```
 
 - pr merge
@@ -100,11 +100,15 @@ Squash and merge 선택 후 merge
 ![](./images/squash_and_merge.png)
 
 - pr merge 하는 순간 conflict이 발생할 경우 github 내에서 확인 후 처리
+
+```
 1. Resolve conflicts
 2. <<<<<<. ======, >>>>>> 로 된 부분 삭제 후 정상적으로 상황표에 체크표시가 되게 conflict 부분 수정
 3. Mark as resolved 활성화 버튼 클릭
 4. commit merge 활성화 버튼 클릭
 5. Merge
+```
+
 
 ## 💻스터디 상황표
 |                | [민초](https://github.com/jswith) | [아서](https://github.com/Hyunta) | [앨버](https://github.com/al-bur) | [에덴](https://github.com/leo0842) | [오리](https://github.com/jinyoungchoi95) | [잉](https://github.com/Yboyu0u) | [티거](https://github.com/daaaayeah) | [코린](https://github.com/hamcheeseburger) | [파랑](https://github.com/summerlunaa) |
