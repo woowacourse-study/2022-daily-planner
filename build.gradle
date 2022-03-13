@@ -1,5 +1,13 @@
 plugins {
     id 'java'
+    id "application"
+}
+ext {
+    javaMainClass = "Application"
+}
+
+application {
+    mainClassName = javaMainClass
 }
 
 group 'org.example'
@@ -14,6 +22,13 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
 test {
     useJUnitPlatform()
 }
+
