@@ -41,6 +41,12 @@ class WeekTableTest {
     }
 
     @Test
+    void 물결_포맷도_검증_가능하다() {
+        final String title = "2월28일~3월6일.md";
+        assertThat(WeekTable.isWeekTable(title)).isTrue();
+    }
+
+    @Test
     void todo를_받아서_데일리플랜을_저장한다() {
         final String title = "3월7일~3월13일.md";
         final String todos = "# \uD83D\uDC2F 3월 7일 ~ 3월 13일\n"
