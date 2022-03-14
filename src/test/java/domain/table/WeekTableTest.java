@@ -42,7 +42,7 @@ class WeekTableTest {
 
     @Test
     void 물결_포맷도_검증_가능하다() {
-        final String title = "2월28일~3월6일.md";
+        final String title = "2월28일~3월6일 .md";
         assertThat(WeekTable.isWeekTable(title)).isTrue();
     }
 
