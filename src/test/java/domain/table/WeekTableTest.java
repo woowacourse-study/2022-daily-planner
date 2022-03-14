@@ -58,14 +58,20 @@ class WeekTableTest {
                 + "\n"
                 + "## 3월 8일 (화)\n"
                 + "\n"
-                + "- [x] 10시 30분 강의\n"
-                + "- [ ] 유튜브 미션\n";
+                + "- [ ] 10시 30분 강의\n"
+                + "- [ ] 유튜브 미션\n"
+                + "\n"
+                + "## 3월 9일 (수)\n"
+                + "\n"
+                + "- [X] 10시 30분 강의\n"
+                + "- [X] 유튜브 미션\n";
 
         final WeekTable weekTable = WeekTable.from(title, todos);
         assertAll(
-                () -> assertThat(weekTable.getDailyPlans()).hasSize(2),
+                () -> assertThat(weekTable.getDailyPlans()).hasSize(3),
                 () -> assertThat(weekTable.getDailyPlans().get(0).isAllPlanDone()).isTrue(),
-                () -> assertThat(weekTable.getDailyPlans().get(1).isAllPlanDone()).isFalse()
+                () -> assertThat(weekTable.getDailyPlans().get(1).isAllPlanDone()).isFalse(),
+                () -> assertThat(weekTable.getDailyPlans().get(2).isAllPlanDone()).isTrue()
         );
     }
 
