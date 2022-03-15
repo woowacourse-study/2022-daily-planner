@@ -41,6 +41,12 @@ class WeekTableTest {
     }
 
     @Test
+    void 물결_포맷도_검증_가능하다() {
+        final String title = "2월28일~3월6일 .md";
+        assertThat(WeekTable.isWeekTable(title)).isTrue();
+    }
+
+    @Test
     void todo를_받아서_데일리플랜을_저장한다() {
         final String title = "3월7일~3월13일.md";
         final String todos = "# \uD83D\uDC2F 3월 7일 ~ 3월 13일\n"
@@ -52,14 +58,20 @@ class WeekTableTest {
                 + "\n"
                 + "## 3월 8일 (화)\n"
                 + "\n"
-                + "- [x] 10시 30분 강의\n"
-                + "- [ ] 유튜브 미션\n";
+                + "- [ ] 10시 30분 강의\n"
+                + "- [ ] 유튜브 미션\n"
+                + "\n"
+                + "## 3월 9일 (수)\n"
+                + "\n"
+                + "- [X] 10시 30분 강의\n"
+                + "- [X] 유튜브 미션\n";
 
         final WeekTable weekTable = WeekTable.from(title, todos);
         assertAll(
-                () -> assertThat(weekTable.getDailyPlans()).hasSize(2),
+                () -> assertThat(weekTable.getDailyPlans()).hasSize(3),
                 () -> assertThat(weekTable.getDailyPlans().get(0).isAllPlanDone()).isTrue(),
-                () -> assertThat(weekTable.getDailyPlans().get(1).isAllPlanDone()).isFalse()
+                () -> assertThat(weekTable.getDailyPlans().get(1).isAllPlanDone()).isFalse(),
+                () -> assertThat(weekTable.getDailyPlans().get(2).isAllPlanDone()).isTrue()
         );
     }
 

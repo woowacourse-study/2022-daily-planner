@@ -9,9 +9,11 @@ import java.util.stream.Stream;
 
 public class WeekTable {
 
-    private static final Pattern WEEKLY_FILE_TITLE_PATTERN = Pattern.compile("^[0-9]*월[0-9]*일-[0-9]*월[0-9]*일.md$");
-    private static final Pattern WEEKLY_FILE_TITLE_PATTERN2 = Pattern.compile("^[0-9]*월[0-9]*일~[0-9]*월[0-9]*일.md$");
+    private static final Pattern WEEKLY_FILE_TITLE_PATTERN = Pattern.compile("^[0-9]*월[0-9]*일-[0-9]*월[0-9].*$");
     private static final Pattern WEEKLY_FILE_TITLE_NUMBER_PATTERN = Pattern.compile("\\d{1,2}");
+
+    private static final String WAVE_MESSAGE = "~";
+    private static final String HYPHEN_MESSAGE = "-";
 
     private static final int THIS_YEAR = 2022;
 
@@ -28,8 +30,7 @@ public class WeekTable {
     }
 
     public static WeekTable from(final String title, final String todos) {
-        final String newTitle = title.replace("~", "-")
-                .replaceAll(" ", "");
+        final String newTitle = formatingTitle(title);
         if (!WEEKLY_FILE_TITLE_PATTERN.matcher(newTitle).find()) {
             throw new IllegalArgumentException("포맷 이슈");
         }
@@ -39,7 +40,7 @@ public class WeekTable {
 
     private static List<DailyPlan> toDailPlans(final String todos) {
         return Stream.of(removeDuplicate(todos).split("#"))
-                .filter(value -> value.contains("- [ ]") || value.contains("- [x]"))
+                .filter(value -> value.contains("- [ ]") || value.contains("- [x]") || value.contains("- [X]"))
                 .map(DailyPlan::from)
                 .collect(Collectors.toList());
     }
@@ -59,7 +60,12 @@ public class WeekTable {
     }
 
     public static boolean isWeekTable(final String title) {
-        return WEEKLY_FILE_TITLE_PATTERN.matcher(title).find() || WEEKLY_FILE_TITLE_PATTERN2.matcher(title).find();
+        return WEEKLY_FILE_TITLE_PATTERN.matcher(formatingTitle(title)).find();
+    }
+
+    private static String formatingTitle(final String title) {
+        return title.replace(WAVE_MESSAGE, HYPHEN_MESSAGE)
+                .replace(" ", "");
     }
 
     public boolean isContainPlan(final LocalDate localDate) {
