@@ -31,8 +31,3 @@ jobs:
           ./gradlew run
           git commit --allow-empty -m "refresh dash board in README.md" -a
           git push upstream main
-      - uses: colmose/push-bot@v1.0.0
-        with:
-          token: ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
-          branch_name: 'main'
-          bot_name: 'admin-machine'
