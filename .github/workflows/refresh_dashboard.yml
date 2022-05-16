@@ -35,4 +35,4 @@ jobs:
         with:
           github_token: ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
           branch: ${{ github.ref }}
-          force: 'true'
+          force: true
