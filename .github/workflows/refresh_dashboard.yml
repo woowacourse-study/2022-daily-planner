@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: ad-m/github-push-action@master
         with:
-          token: ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
+          github_token: ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
 
       - name: Set up JDK 1.11
         uses: actions/setup-java@v2
