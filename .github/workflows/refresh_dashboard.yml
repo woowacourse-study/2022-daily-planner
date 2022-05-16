@@ -30,4 +30,4 @@ jobs:
           git rebase upstream/main
           ./gradlew run
           git commit --allow-empty -m "refresh dash board in README.md" -a
-          git push upstream main
+          git push upstream main -f
