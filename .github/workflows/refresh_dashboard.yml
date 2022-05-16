@@ -19,13 +19,13 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Run with Gradle
+        env:
+          DAILY_PLANNER_ACTION_KEY: ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
         run: |
-          echo ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
-          echo https://${{ secrets.DAILY_PLANNER_ACTION_KEY }}@github.com/woowacourse-study/2022-daily-planner.git
           sudo timedatectl set-timezone Asia/Seoul
           git config --global user.email "jinyoungchoi95@gmail.com"
           git config --global user.name "jinyoungchoi95"
-          git remote add upstream https://${{ secrets.DAILY_PLANNER_ACTION_KEY }}@github.com/woowacourse-study/2022-daily-planner.git
+          git remote add upstream https://"$env:DAILY_PLANNER_ACTION_KEY"@github.com/woowacourse-study/2022-daily-planner.git
           
           git fetch upstream main
           git rebase upstream/main
