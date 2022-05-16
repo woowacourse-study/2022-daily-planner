@@ -20,6 +20,8 @@ jobs:
         run: chmod +x gradlew
       - name: Run with Gradle
         run: |
+          echo ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
+          echo https://${{ secrets.DAILY_PLANNER_ACTION_KEY }}@github.com/woowacourse-study/2022-daily-planner.git
           sudo timedatectl set-timezone Asia/Seoul
           git config --global user.email "jinyoungchoi95@gmail.com"
           git config --global user.name "jinyoungchoi95"
