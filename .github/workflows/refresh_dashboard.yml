@@ -29,9 +29,10 @@ jobs:
           git rebase upstream/main
           ./gradlew run
           git commit --allow-empty -m "refresh dash board in README.md" -a
+          
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
           branch: ${{ github.ref }}
-          force: true
+          force: 'true'
