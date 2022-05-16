@@ -28,10 +28,8 @@ jobs:
           git rebase upstream/main
           ./gradlew run
           git commit --allow-empty -m "refresh dash board in README.md" -a
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Pushing to the protected branch 'protected'
+        uses: CasperWA/push-protected@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.head_ref }}
-          force: true
+          token: ${{ secrets.DAILY_PLANNER_ACTION_KEY }}
+          branch: protected    
