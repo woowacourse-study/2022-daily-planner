@@ -1,0 +1,135 @@
+{
+  "main": {
+    "id": "dc60b860f577c861",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d3d7071671b3a6e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "10월4일~10월10일.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6d4c3e2f8de753d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7a940ddf619055e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28320ee5d9a63e39",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "964e40b9c322f8ba",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7729d1b261398197",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8e3d8a5854e2c551",
+    "type": "split",
+    "children": [
+      {
+        "id": "e5261b62422bd75d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a321a88c7d6fb237",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "10월4일~10월10일.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d7dfb3b79716e4ca",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "10월4일~10월10일.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "de139045e957328f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "055e6eb42ed8784c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "10월4일~10월10일.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "8d3d7071671b3a6e",
+  "lastOpenFiles": [
+    "10월4일~10월10일.md"
+  ]
+}
